@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Hassan</title>
+    <link rel="icon" href="Mahmoud.jpg"/>
+    <link rel="shortcut" href="Mahmoud.jpg"/>
+    <link rel="apple-touch-icon" href="Mahmoud.jpg"/>
+    <meta name="description" content="I am learning web programming languages,HTML,CSS,Java Script,PHP,Bootstrap at Coder's website"/>
+    <meta name="author" content="Mahmoud-الساعة والتاريخ"/>
+    <meta name="keywords" content=" Mahmoud-تعلم لغات البرمجة"/>
+    <meta property="og:title" content=" Mahmoud-تعلم لغات البرمجة"/>
+    <meta property="og:description" content=" Mahmoud-تعلم لغات البرمجة"/>
+    <meta property="og:image" content="Mahmoud.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta name="twitter:title" content=" Eng-Mahmoud-تعلم لغات البرمجة"/>
+    <meta name="twitter:description" content=" Eng-Mahmoud-تعلم لغات البرمجة"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="Mahmoud.jpg"/>
+    <style>
+        *{
+            margin: 0px;
+        }
+        #android{
+            width: 100%;
+display: flex;
+justify-content: center;
+border-bottom: 2px solid #a9a9a8;
+padding: 5px 0px;
+display: none;
+        }
+        #android img{
+            width: 60px; 
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 13px;
+        }
+        #text{
+            font-weight: bold;
+            width: 40%;
+            
+        }
+        #close{
+            line-height: 60px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #888888;
+            margin: 0px 11px;
+            cursor: pointer;
+        }
+        #app_name{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 3px 0px;
+        }
+        #app_title{
+            font-size: 14px;
+            font-family: monospace;
+        }
+        #android button{
+            width: 20%;
+            background-color: rgb(31, 31, 31);
+            color: white;
+            border-radius: 14px;
+            border: 0px;
+            height: 35px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="android">
+        <span id="close">&times;</span>
+        <img src="Mahmoud.jpg"/>
+        <span id="text">
+            <p id="app_name">Mahmoud App</p>
+            <p id="app_title">free on Google play</p>
+        </span>
+        <button id="app_download">Download</button>
+    </section>
+    <script>
+        var user_device=navigator.userAgent.toLowerCase();
+        var android=document.getElementById("android");
+        var close=document.getElementById("close");
+        var download=document.getElementById("app_download");
+        if(user_device.includes("android")){
+            setTimeout(()=>{
+                android.style.display="flex";
+            },3000)
+            download.addEventListener("click",()=>{
+window.open("http://www.codershiyarjemo.com");
+            });
+            close.addEventListener("click",()=>{
+                android.style.display="none";
+            });
+        }else{
+            android.style.display="none";
+        }
+        // var android=document.getElementById("android");
+        // var user_device=navigator.userAgent.toLowerCase();
+        // var download=document.getElementById("btn");
+        // var close=document.getElementById("close");
+//         if(user_device.includes("android")){
+//             setTimeout(()=>{
+//                 android.style.display="flex";
+//             },3*1000)
+            
+//             download.addEventListener("click",()=>{
+// window.open("http:codershiyarjemo.com"),"_blank";
+//             });
+//             close.addEventListener("click",()=>{
+//                 android.style.display="none";
+//             });
+//         }
+//         else{
+//             android.style.display="none";
+//         }
+    </script>
+</body>
+</html>
